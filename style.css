@@ -1,0 +1,36 @@
+:root {
+    --dark-blue: #363f5f;
+    --green: #49aa26;
+    --red: #e92929;
+    --bg: #f0f2f5;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body { background: var(--bg); color: var(--dark-blue); }
+
+header { background: #2d3341; padding: 2rem 0 5rem; text-align: center; color: white; }
+
+.container { width: 90%; max-width: 800px; margin: -3rem auto 2rem; }
+
+/* Cards de Saldo */
+#balance { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+.card { background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.card.total { background: var(--green); color: white; }
+
+/* Gráfico */
+#charts { background: white; margin: 2rem 0; padding: 1rem; border-radius: 0.5rem; max-height: 300px; display: flex; justify-content: center; }
+
+/* Formulário */
+form { display: flex; gap: 0.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+form input, form select, form button { padding: 0.8rem; border: 1px solid #ddd; border-radius: 0.25rem; flex: 1; }
+form button { background: var(--green); color: white; font-weight: bold; border: none; cursor: pointer; transition: 0.3s; }
+form button:hover { background: #3d8e20; }
+
+/* Tabela */
+table { width: 100%; border-spacing: 0 0.5rem; color: #969cb3; }
+th { background: white; font-weight: normal; padding: 1rem 2rem; text-align: left; }
+td { background: white; padding: 1rem 2rem; color: var(--dark-blue); }
+td.income { color: var(--green); }
+td.expense { color: var(--red); }
+.remove { cursor: pointer; color: var(--red); }
