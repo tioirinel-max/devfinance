@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFinance | Meu Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Dev<span>Finance</span></h1>
+    </header>
+
+    <main class="container">
+        <section id="balance">
+            <div class="card">
+                <h3>Entradas</h3>
+                <p id="incomeDisplay">R$ 0,00</p>
+            </div>
+            <div class="card">
+                <h3>Saídas</h3>
+                <p id="expenseDisplay">R$ 0,00</p>
+            </div>
+            <div class="card total">
+                <h3>Total</h3>
+                <p id="totalDisplay">R$ 0,00</p>
+            </div>
+        </section>
+
+        <section id="charts">
+            <canvas id="myChart"></canvas>
+        </section>
+
+        <section id="transaction">
+            <form id="form">
+                <input type="text" id="description" placeholder="Descrição" required>
+                <input type="number" id="amount" step="0.01" placeholder="0,00" required>
+                <select id="type">
+                    <option value="income">Entrada</option>
+                    <option value="expense">Saída</option>
+                </select>
+                <button type="submit">Adicionar</button>
+            </form>
+        </section>
+
+        <section id="history">
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="transaction-body">
+                    </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
